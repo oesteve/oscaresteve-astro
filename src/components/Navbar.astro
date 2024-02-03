@@ -35,12 +35,10 @@ import NavItem from "./NavItem.astro";
 
 
 <script>
-
   const toggleMenuButton = document.getElementById('toggleMenuButton');
   const navbarLinks = document.getElementById('navbarLinks');
 
-  toggleMenuButton.addEventListener('click', () => {
-    navbarLinks.classList.toggle('hidden');
+  toggleMenuButton?.addEventListener('click', () => {
+    navbarLinks?.classList.toggle('hidden');
   });
-
 </script>
