@@ -1,0 +1,46 @@
+---
+import NavItem from "./NavItem.astro";
+---
+<nav>
+    <div class="flex flex-col md:flex-row mx-auto justify-between py-6 text-neutral-300 max-w-screen-xl">
+        <div class="mb-12 md:mb-0 flex flex-row justify-between items-center">
+            <a href="/" class="flex flex-row gap-4 items-center">
+                <img src="/logo.svg" alt="logo" class="h-11">
+                <span class="text-2xl font-medium">Oscar Esteve</span>
+            </a>
+
+            <button class="md:hidden" id="toggleMenuButton">
+                <?xml version="1.0" encoding="utf-8"?>
+                <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                <svg width="40px" height="40px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M4 5C3.44772 5 3 5.44772 3 6C3 6.55228 3.44772 7 4 7H20C20.5523 7 21 6.55228 21 6C21 5.44772 20.5523 5 20 5H4ZM7 12C7 11.4477 7.44772 11 8 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H8C7.44772 13 7 12.5523 7 12ZM13 18C13 17.4477 13.4477 17 14 17H20C20.5523 17 21 17.4477 21 18C21 18.5523 20.5523 19 20 19H14C13.4477 19 13 18.5523 13 18Z"
+                          fill="#D4D4D4"
+                    />
+                </svg>
+            </button>
+        </div>
+
+
+        <div class="hidden md:block" id="navbarLinks">
+            <ul class="flex flex-col gap-4 text-3xl md:text-xl  md:flex-row md:gap-2">
+                <NavItem href="/#about">About</NavItem>
+                <NavItem href="/#projects">Projects</NavItem>
+                <NavItem href="/#contact">Contact</NavItem>
+                <NavItem href="/blog">Blog</NavItem>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<script>
+
+  const toggleMenuButton = document.getElementById('toggleMenuButton');
+  const navbarLinks = document.getElementById('navbarLinks');
+
+  toggleMenuButton.addEventListener('click', () => {
+    navbarLinks.classList.toggle('hidden');
+  });
+
+</script>
