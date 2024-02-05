@@ -1,4 +1,6 @@
 import puppeteer from 'puppeteer';
+export const prerender = false;
+
 export async function GET() {
   const browser = await puppeteer.launch({ headless: true });
   const page = await browser.newPage();
