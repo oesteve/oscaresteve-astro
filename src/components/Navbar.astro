@@ -23,9 +23,9 @@ import NavItem from "./NavItem.astro";
         <div class="relative hidden md:block" id="navbarLinks">
             <ul class="absolute py-12 z-10 w-full px-4 bg-background border-b-2 border-gray-800 flex flex-col gap-4 text-3xl md:p-0 md:border-0 md:static md:text-xl md:flex-row md:gap-2">
                 <NavItem href="/#about">About</NavItem>
-                <NavItem href="/#projects">Projects</NavItem>
-                <NavItem href="/#contact">Contact</NavItem>
-                <NavItem href="/blog">Blog</NavItem>
+                <NavItem href="/#projects" disabled >Projects</NavItem>
+                <NavItem href="/#contact" disabled>Contact</NavItem>
+                <NavItem href="/blog" disabled>Blog</NavItem>
             </ul>
         </div>
     </div>

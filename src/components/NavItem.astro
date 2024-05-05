@@ -1,8 +1,17 @@
 ---
 const { href } = Astro.props;
+
+interface Props {
+    href: string;
+    disabled?: boolean;
+}
+
+const { disabled = false } = Astro.props;
 ---
 <li>
-    <a class="rounded px-4 py-2 bg-neutral-800 bg-opacity-0 hover:bg-opacity-75 transition-all duration-400 inline-block text-center w-full" href={href}>
+    <a class={`rounded px-4 py-2 bg-neutral-800 bg-opacity-0 hover:bg-opacity-75 transition-all duration-400 inline-block text-center w-full ${disabled ? 'line-through' : ''}`}
+       href={href}
+    >
         <slot />
     </a>
 </li>

@@ -3,15 +3,16 @@ import Layout from '../layouts/Layout.astro';
 import Navbar from "../components/Navbar.astro";
 
 const yearsAgo = (new Date().getFullYear() - 2011);
+const yearsAsDeveloper = (new Date().getFullYear() - 2018);
 ---
 
 <Layout title="Oscar Esteve - Web full stack develop">
     <Navbar/>
     <main>
         <div class="px-4 py-12 md:px-8 md:py-24 max-w-screen-lg mx-auto relative flex flex-col gap-8">
-            <h1 class="text-6xl font-mediumleading-14">Hey !<br> my name is
+            <h1 class="text-6xl font-medium leading-[5rem]">Hello !<br> I'm
                 <span class="bg-gradient-to-r from-blue-300 to-primary bg-clip-text text-transparent font-bold">
-                  Oscar
+                  Oscar Esteve
                 </span>
             </h1>
             <h2 class="text-2xl font-medium uppercase text-neutral-300">web full stack developer</h2>
@@ -27,14 +28,15 @@ const yearsAgo = (new Date().getFullYear() - 2011);
             </div>
         </div>
     </main>
-    <section class="px-4 py-12 md:px-8 md:py-36 max-w-screen-lg mx-auto" id="about">
+    <section class="px-4 py-12 md:px-8 md:py-36 max-w-screen-xl mx-auto" id="about">
         <div>
-            <h2 class="text-5xl mb-8">About me</h2>
+            <h2 class="text-5xl mb-8 font-bold text-blue-300">About me</h2>
             <p class="mb-8 leading-8 text-xl">My career began around {yearsAgo} years ago as a systems and
                 communications administrator, from where I started a transition to full stack developer, in which I have
-                specialised for the last 8 years. This transition provided me a broad range of knowledge in
-                different areas, including hardware, networking, operations and software engineering ... That is
-                something that allows me to know the impact of every decision and to be resolute in my daily work.
+                specialised for the last {yearsAsDeveloper} years. This transition provided me a broad range of
+                knowledge in different areas, including hardware, networking, operations and software engineering ...
+                That is something that allows me to know the impact of every decision and to be resolute in my daily
+                work.
             </p>
 
             <p class="mb-8 leading-8 text-xl">
@@ -43,9 +45,11 @@ const yearsAgo = (new Date().getFullYear() - 2011);
                 to manage the backend platforms that I was working on.
             </p>
 
-            <p class="mb-8 leading-8 text-xl">I am fortunate that my hobby can be my work. In my free time I usually
-                collaborate as a freelancer with small projects or startups, something that helps me to discover new
-                technologies, how others develop their ideas and help them to succeed in their projects.
+            <p class="mb-8 leading-8 text-xl">
+                During my career, I have had the chance to work as a freelance on various small projects. This has given
+                me the opportunity to enhanced my abilities in understanding clients' needs, effective communication, and
+                meeting deadlines. But above all, this period expanded my perspective beyond programming, enabling me to
+                comprehend the business aspect of each project.
             </p>
         </div>
     </section>
