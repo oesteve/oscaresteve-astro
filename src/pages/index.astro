@@ -1,45 +1,52 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Navbar from "../components/Navbar.astro";
+
+const yearsAgo = (new Date().getFullYear() - 2011);
 ---
 
 <Layout title="Oscar Esteve - Web full stack develop">
     <Navbar/>
     <main>
         <div class="px-4 py-12 md:px-8 md:py-24 max-w-screen-lg mx-auto relative flex flex-col gap-8">
-            <h1 class="text-6xl font-mediumleading-14">Hello !<br> my name is
+            <h1 class="text-6xl font-mediumleading-14">Hey !<br> my name is
                 <span class="bg-gradient-to-r from-blue-300 to-primary bg-clip-text text-transparent font-bold">
                   Oscar
                 </span>
             </h1>
             <h2 class="text-2xl font-medium uppercase text-neutral-300">web full stack developer</h2>
             <p class="max-w-screen-md leading-8 text-xl">
-                I offer development and maintenance services for web applications, providing scalable, robust, and
-                customized solutions to meet the unique needs of each project.
+                I spend my workdays creating and maintaining web applications, proving scalable, robust, and tailored
+                solutions to meet each project's specific requirements.
             </p>
             <div class="py-8 text-center md:text-start">
-                <a href="https://calendly.com/oscar-esteve/30min"
+                <a href="https://www.linkedin.com/in/oscar-esteve/"
                    class="bg-primary text-2xl px-12 py-4 inline-block rounded-full hover:opacity-90 transition-opacity duration-200">
                     Get in touch
                 </a>
             </div>
         </div>
     </main>
-    <section class="px-4 py-12 md:px-8 md:py-36 max-w-screen-lg mx-auto">
+    <section class="px-4 py-12 md:px-8 md:py-36 max-w-screen-lg mx-auto" id="about">
         <div>
             <h2 class="text-5xl mb-8">About me</h2>
-            <p class="mb-8 leading-8 text-xl">My career began more than 13 years ago as a systems and communications administrator, from where I started a
-                transition to full stack developer, in which I have specialised for the last 8 years. This transition has
-                provided me with a broad range of knowledge that allows me to be resolute and autonomous in my day-to-day
-                work.</p>
+            <p class="mb-8 leading-8 text-xl">My career began around {yearsAgo} years ago as a systems and
+                communications administrator, from where I started a transition to full stack developer, in which I have
+                specialised for the last 8 years. This transition provided me a broad range of knowledge in
+                different areas, including hardware, networking, operations and software engineering ... That is
+                something that allows me to know the impact of every decision and to be resolute in my daily work.
+            </p>
 
-            <p class="mb-8 leading-8 text-xl">Over the last few years, I have been focussed on backend development, designing, deploying, and scaling
-                distributed environments. I have also been connected to the frontend side, developing diverse web tools to
-                manage the platforms that I was working on.</p>
+            <p class="mb-8 leading-8 text-xl">
+                Over the last few years, I have been focussed on backend development, designing, deploying, and scaling
+                distributed environments. I have also been connected to the frontend side, developing diverse web tools
+                to manage the backend platforms that I was working on.
+            </p>
 
-            <p class="mb-8 leading-8 text-xl">I am fortunate that my hobby can be my work. In my free time I usually collaborate as a freelancer with small
-                projects or startups, something that helps me to discover new technologies, how others develop their ideas
-                and help them to succeed in their projects.</p>
+            <p class="mb-8 leading-8 text-xl">I am fortunate that my hobby can be my work. In my free time I usually
+                collaborate as a freelancer with small projects or startups, something that helps me to discover new
+                technologies, how others develop their ideas and help them to succeed in their projects.
+            </p>
         </div>
     </section>
     <div class="absolute start-0 top-0 w-full -z-10">
@@ -60,3 +67,10 @@ import Navbar from "../components/Navbar.astro";
     </div>
 
 </Layout>
+
+
+<style>
+    :root {
+        scroll-behavior: smooth;
+    }
+</style>
